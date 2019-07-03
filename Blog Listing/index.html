@@ -4,12 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- FONT AWESOME ICONS STYLESHEET -->
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- GOOGLE FONT STYLESHEET -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/style.css">
     <title>EDOYA</title>
 </head>
 <body>
     <!-- NAVIGATION -->
+    <!-- NavBar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <div class="title">
+                <h1 class="title--main">Edyoda</h1>
+                <h3 class="title--sub"><em>Stories</em></h3>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Explore Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+            <p class="about">Edyoda is a free learning and knowledge sharing platform for techies</p>
+            <a href="#" class="button button--primary">Go To Main Website</a>
+        </div>
+    </nav>    
+    <!-- End / NavBar -->
+
     <main class="main">
         <!-- SECTION - TRENDING POSTS -->
         <section class="section-trending">
@@ -17,10 +65,10 @@
             <div class="row">
                 <div class="col-2-of-3">
                     <div class="post">
-                        <div class="post__image post__image--1">
+                        <div class="post__image post__image--big post__image--1">
                             &nbsp;
                         </div>
-                        <div class="post__text-box">
+                        <div class="post__text-box post__text-box--big">
                             <h1 class="heading-primary u-margin-bottom-small">Yes, Slack is having connectivity issues</h1>
                             <div class="post__details">
                                 <em class="post__author">By Zack Whittaker</em>  |  <span class="post__date">04 Jul 2018</span>
@@ -29,13 +77,83 @@
                     </div>
                 </div>
                 <div class="col-1-of-3">
-                    <!-- PENDING GRID -->
+                    <div class="post">
+                        <div class="post__image post__image--small post__image--2">
+                            &nbsp;
+                        </div>
+                        <div class="post__text-box post__text-box--small">
+                            <h3 class="heading-tertiary">Asking Alexa for news no longer has to stop with the latest headlines</h3>
+                            <div class="post__details">
+                                <em class="post__author">By Kunal Sharma</em>  |  <span class="post__date">04 Jul 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post u-margin-bottom-small">
+                        <div class="post__image post__image--small post__image--3">
+                            &nbsp;
+                        </div>
+                        <div class="post__text-box post__text-box--small">
+                            <h3 class="heading-tertiary">Former Ripple Exec to Lead Binance’s US Expansion as New Exchange CEO</h3>
+                            <div class="post__details">
+                                <em class="post__author">By Kunal Sharma</em>  |  <span class="post__date">04 Jul 2018</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         
         <section class="section-latest-posts">
             <h3 class="heading-tertiary u-margin-bottom-medium">Latest Posts</h3>
+            <div class="filter">
+                <div class="filter--left">
+                    <i class="fa fa-filter filter__icon" aria-hidden="true"></i>
+                    <a href="#" class="filter__label">Filter by Category</a>
+                </div>
+                <div class="filter--right">
+                    <a href="#" class="filter__label">Clear all filters</a>
+                </div>
+            </div>
+            <form action="#" class="form u-margin-top-medium">
+                <div class="form__group">
+                    <div class="form__check-group">
+                        <input type="checkbox" name="filter" id="cloud-computing" class="form__check-input">
+                        <label for="cloud-computing" class="form__check-label">Cloud Computing</label>
+                    </div>
+                    <div class="form__check-group">
+                        <input type="checkbox" name="filter" id="machine-learning" class="form__check-input">
+                        <label for="machine-learning" class="form__check-label">Machine Learning</label>
+                    </div>
+                    <div class="form__check-group">
+                        <input type="checkbox" name="filter" id="python-scripting" class="form__check-input">
+                        <label for="python-scripting" class="form__check-label">Python Scripting</label>
+                    </div>
+                    <div class="form__check-group">
+                        <input type="checkbox" name="filter" id="artificial-intelligence" class="form__check-input">
+                        <label for="artificial-intelligence" class="form__check-label">Artificial Intelligence</label>
+                    </div>
+                    <div class="form__check-group">
+                        <input type="checkbox" name="filter" id="aws" class="form__check-input">
+                        <label for="aws" class="form__check-label">AWS</label>
+                    </div>
+                    <div class="form__check-group">
+                        <input type="checkbox" name="filter" id="ui-framework" class="form__check-input">
+                        <label for="ui-framework" class="form__check-label">UI Framework</label>
+                    </div>
+                    <div class="form__check-group">
+                        <input type="checkbox" name="filter" id="android" class="form__check-input">
+                        <label for="android" class="form__check-label">Android</label>
+                    </div>
+                    <div class="form__check-group">
+                        <input type="checkbox" name="filter" id="php" class="form__check-input">
+                        <label for="php" class="form__check-label">PHP</label>
+                    </div>
+                    <div class="form__check-group">
+                        <input type="checkbox" name="filter" id="ux-framework" class="form__check-input">
+                        <label for="ux-framework" class="form__check-label">UX Framework</label>
+                    </div>
+                </div>
+            </form>
             <div class="row">
                 <div class="col-1-of-3">
                     <div class="card">
@@ -87,7 +205,24 @@
                 </div>
             </div>
         </section>
-    </main>    
+    </main>
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script>
+        $(function(){
+            $(document).scroll(function() {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
 </body>
 </html>
 

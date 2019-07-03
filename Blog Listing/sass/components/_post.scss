@@ -2,26 +2,49 @@
     position: relative;
     width: 100%;
 
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
     &__image{
         border-radius: $border-radius;
         background-size: cover;
         
-        &--1{
+        &--big{
             height: 40rem;
+        }
+
+        &--small{
+            height: 18.5rem;
+        }
+
+        &--1{
             background-image: linear-gradient(to bottom, rgba($color-black, 0), rgba($color-black, .7)), url("../../img/denys-nevozhai-_QoAuZGAoPY-unsplash.jpg");
         }
         
         &--2{
-            height: 18.5rem;
-            background-image: linear-gradient(to bottom, rgba($color-black, 0), rgba($color-black, .7)), url("../../img/denys-nevozhai-_QoAuZGAoPY-unsplash.jpg");
+            background-image: linear-gradient(to bottom, rgba($color-black, 0), rgba($color-black, .7)), url("../../img/sebastian-scholz-nuki-Fh3Dtg6QX4Q-unsplash.jpg");
+        }
+
+        &--3{
+            background-image: linear-gradient(to bottom, rgba($color-black, 0), rgba($color-black, .7)), url("../../img/foto-sushi-6anudmpILw4-unsplash.jpg");
         }
     }
 
     &__text-box{
         color: $color-white;
         position: absolute;
-        bottom: 6rem;
-        left: 4rem;
+        width: 80%;
+
+        &--big{
+            bottom: 6rem;
+            left: 4rem;
+        }
+
+        &--small{
+            bottom: 2rem;
+            left: 2rem;
+        }
     }
 
     &__details {

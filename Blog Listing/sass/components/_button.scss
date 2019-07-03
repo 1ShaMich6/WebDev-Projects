@@ -1,0 +1,25 @@
+.button{   
+    &,
+    &:link,
+    &:visited{
+        padding: 1rem 3rem;
+        margin: 0 9rem 0 2rem;
+        font-size: 1.4rem;
+        color: $color-white;
+        text-decoration: none;
+        border-radius: 50rem;
+        background-image: linear-gradient(105deg, $color-primary-light, $color-primary-dark);
+        outline: none;
+        transition: all .2s;
+    }
+    
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 .5rem 2rem rgba($color-black, .15);
+    }
+    
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+}

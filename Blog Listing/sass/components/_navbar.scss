@@ -1,0 +1,15 @@
+.navbar-light{
+    background-color: $color-white !important;
+}
+
+.navbar-brand{
+    margin: .5rem 9rem;
+
+    &:hover .title .title--main{
+        letter-spacing: 5px;
+    }
+}
+
+.nav-link{
+    font-size: 1.3rem;
+}
