@@ -13,3 +13,11 @@
 .nav-link{
     font-size: 1.3rem;
 }
+
+.title{
+    &--sub{
+        @include respond(tab-port-lg){
+            display: none;
+        }
+    }
+}

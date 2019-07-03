@@ -1,5 +1,6 @@
 .form{
     margin: 0 auto;
+    margin-bottom: 2rem;
 
     &__group{
         margin-bottom: 6rem;
@@ -11,13 +12,16 @@
         float: left;
 
         &:not(:last-child){
-            padding-right: .2rem;
+            margin-right: 2rem;
+            
+            @include respond(tab-land){
+                margin-right: 1rem;
+            }
         }
     }
 
     &__check-input{
-        visibility: hidden;
-        opacity: 0;
+        display: none;
     }
 
     &__check-label{

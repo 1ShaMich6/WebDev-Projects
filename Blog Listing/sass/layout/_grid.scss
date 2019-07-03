@@ -4,6 +4,10 @@
 
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+        
+        @include respond(tab-port){
+            margin-bottom: 10rem;
+        }
     }
 
     @include clearfix;
@@ -27,5 +31,27 @@
 
     .col-2-of-3{
         width: calc((2 * (100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    }
+}
+
+.row-desktop{
+    @include respond(tab-port){
+        display: none;
+    }
+}
+
+.row-tab{
+    display: none;
+
+    @include respond(tab-port){
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+          
+        &:not(:last-child){
+            margin-bottom: $gutter-vertical;
+        }
+    
+        @include clearfix;      
     }
 }
