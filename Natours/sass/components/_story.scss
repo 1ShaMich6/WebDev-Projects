@@ -45,7 +45,7 @@
 
     &:hover &__image{
         transform: translate(-3.7rem) scale(1);
-        filter: blur(3px) brightness(80%);
+        filter: brightness(80%) blur(3px);
     }
 
     &:hover &__caption{
